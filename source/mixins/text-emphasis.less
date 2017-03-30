@@ -1,0 +1,10 @@
+// Typography
+
+.text-emphasis-variant(@color) {
+  color: @color;
+  a{color: saturate(@color, 50%);}
+  a&:hover,
+  a&:focus {
+    color: lighten(@color, 20%);
+  }
+}

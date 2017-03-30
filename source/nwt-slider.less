@@ -1,0 +1,81 @@
+// variabales NWT COL
+// @andrearomero
+// SLIDER
+//
+// --------------------------------------------------
+@path-img: "http://cms.mintic.gov.co/static/cache/binaries/channels-554_img_";
+
+.slider-gral  {
+	position: relative;
+	width: 100%;
+    overflow: hidden;
+    line-height: 1.5em;
+    padding: 0px 0px;
+    display: block;
+    .recuadro{
+        .figure{
+            position: relative;
+            float: left;
+            z-index: 0;
+            width:100%;
+            img{.size(100%; auto);}
+        }
+        .bg-slider {
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            width:100%;
+            img{.size(100%; auto);}
+        }
+    }  
+
+    .next{   
+        .slider-arrows();            
+        background-position: 36px 0px;        
+        right: 0px;        
+        > a{.slider-arrows-a();}
+    }
+
+    .prev{.slider-arrows(); left: 0px; 
+        > a{.slider-arrows-a();}
+    }
+
+    .controls{
+        margin: 0px;
+        position: absolute;
+        margin: 0px;
+        display: inline-block;
+        bottom: 25%;
+        > li{
+            list-style:none;
+            background-image: url('@{path-img}slider.png');
+            background-position: -30px 82px;
+            .pull-left;
+            &.current,&:hover{background-position: -12px 82px;}
+            > a{.square(20px);font-size: 0px; display: block; } }
+    }
+
+    .boton{
+        position: absolute;
+        left: 15px;
+        bottom: 26%;        
+        .pull-left;
+        > .play{.slider-botones(); background-position: -51px 39px;}
+        > .pause{.slider-botones(); background-position: -30px 39px;}
+    }
+}
+.slider_agrupado > div {margin: 0px 30px;}
+.slider-arrows(){
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    background-image: url('@{path-img}slider.png');
+    z-index: 1    
+}
+.slider-arrows-a(){.size(42px;77px); font-size: 0px; display: block; }
+.slider-botones(){
+    .square(20px);
+    font-size: 0px; 
+    display: block;
+    background-image: url('@{path-img}slider.png');
+}

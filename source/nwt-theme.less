@@ -1,0 +1,68 @@
+// NWT COL
+// @andrearomero
+// Theme Costomize Catalizadores de gobierno
+//
+// --------------------------------------------------
+.content-bg {
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    height: auto;
+    @media (max-width: @screen-sm) {
+        position: relative;
+        background-color: black;
+    }
+
+}
+.img-100 > img{width: 100%}
+.share-bar{
+	background-color: #05C1DD;
+	border-top: 3px dotted white;
+	border-bottom: 3px dotted white;
+	p {
+	font-size: 30px;
+	font-weight: bold;}
+	a {
+		display: inline-block;
+		border-right: 1px dotted white;
+		margin-right: 15px;
+		padding-right: 15px;
+	}
+}
+
+.recuadros-border{
+	background-color: @gray-lighter;
+	border-color: darken(@gray-lighter, 30%);
+}
+.recuadros-hover{
+	> a { position: relative; margin-bottom: 10px;
+		.titulo {
+			position: absolute;
+			top: 5%;
+			width: 91%;
+			height: 95%;
+			padding: 21% 15%;
+			transition: background-color 0.5s ease 0s;
+			color: white;
+			opacity: 0;
+			left: 14px;
+			&:hover{background-color: @brand-success;opacity: 1}			
+		}
+	}	
+}
+.border-solid(@position){
+	border-@{position}: 1px solid #b9b9b9;
+} 
+.border-bottom {.border-solid(bottom);}
+
+.recuadros-alto {
+    min-height: 200px;
+    .border-solid(top);
+    .margin-top-md();
+    .titulo-grupo{ .text-center();
+     > a{color:inherit;cursor: text;}
+    }
+    &:nth-child(even) > .recuadros-group{.border-solid(right);}
+}
+
+li {list-style-position: inside;}
